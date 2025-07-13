@@ -34,7 +34,7 @@ graph TD
     B --> D[RAG System]
     B --> E[CRM System]
     
-    C --> F[Hugging Face API]
+    C --> F[Google Gemini API]
     D --> G[Vector Embeddings]
     D --> H[Document Store]
     E --> I[MongoDB]
@@ -55,7 +55,7 @@ graph TD
 ### Prerequisites
 - Python 3.8+
 - MongoDB
-- Hugging Face API Key
+- Google Gemini API Key
 
 ### Installation
 
@@ -228,9 +228,9 @@ Clear conversation memory (optionally for specific user).
 
 - `MONGODB_URL`: MongoDB connection string
 - `DATABASE_NAME`: Database name
-- `HUGGINGFACE_API_KEY`: Your Hugging Face API key
+- `GEMINI_API_KEY`: Your Google Gemini API key
 - `EMBEDDING_MODEL`: Sentence transformer model for embeddings
-- `LLM_MODEL`: Hugging Face model for text generation
+- `LLM_MODEL`: Google Gemini model for text generation
 
 ### Model Configuration
 
