@@ -1,0 +1,68 @@
+graph TD
+    A[Client Application] --> B[FastAPI REST API]
+    
+    B --> C[Chat Endpoint]
+    B --> D[Document Upload]
+    B --> E[CRM Management]
+    B --> F[Health Check]
+    
+    C --> G[LLM Service]
+    C --> H[RAG System]
+    C --> I[CRM System]
+    
+    G --> J[Hugging Face API]
+    G --> K[DialoGPT Model]
+    
+    H --> L[Embedding Model]
+    H --> M[Document Processor]
+    H --> N[Vector Search]
+    
+    I --> O[User Management]
+    I --> P[Conversation Tracking]
+    I --> Q[Categorization]
+    
+    L --> R[Sentence Transformers]
+    M --> S[PDF/TXT/CSV/JSON Parser]
+    
+    subgraph "MongoDB Database"
+        T[Users Collection]
+        U[Conversations Collection]
+        V[Documents Collection]
+        W[Embeddings Collection]
+    end
+    
+    O --> T
+    P --> U
+    M --> V
+    N --> W
+    
+    subgraph "Processing Flow"
+        X[User Message] --> Y[RAG Retrieval]
+        Y --> Z[Context Enhancement]
+        Z --> AA[LLM Generation]
+        AA --> BB[Response + Metadata]
+        BB --> CC[CRM Storage]
+    end
+    
+    subgraph "Document Processing"
+        DD[Document Upload] --> EE[Text Extraction]
+        EE --> FF[Chunking]
+        FF --> GG[Embedding Generation]
+        GG --> HH[Vector Storage]
+    end
+    
+    subgraph "CRM Features"
+        II[User Profiles]
+        JJ[Conversation History]
+        KK[Categorization]
+        LL[Session Management]
+    end
+    
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style J fill:#fff3e0
+    style R fill:#e8f5e8
+    style T fill:#fce4ec
+    style U fill:#fce4ec
+    style V fill:#fce4ec
+    style W fill:#fce4ec
